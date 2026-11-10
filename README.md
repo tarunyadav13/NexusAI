@@ -190,7 +190,45 @@ NexusAI/
 ├── docker-compose.yml
 ├── Dockerfile
 └── requirements.txt
+
+
 ```
+## 📸 Application Screenshots
+
+### 1. Internal Document Chat
+Ask questions about indexed documents using Retrieval-Augmented Generation (RAG), with evidence-based answers and citations.
+
+![NexusAI Internal Chat](screenshots/01-chat-internal-rag.png)
+
+### 2. Knowledge Base & URL Ingestion
+Upload PDF, TXT, and DOCX documents or ingest webpages directly into the knowledge base.
+
+![NexusAI Knowledge Base](screenshots/02-knowledge-base-url-ingestion.png)
+
+### 3. Webpage-Based Question Answering
+Retrieve and use indexed webpage content to generate answers with source citations.
+
+![NexusAI Webpage Chat](screenshots/03-chat-webpage-answer.png)
+
+### 4. Agentic RAG Research
+Use an agentic workflow to determine whether a query requires internal retrieval or external web research.
+
+![NexusAI Agentic RAG](screenshots/04-agentic-rag-research.png)
+
+### 5. Evidence & Source Citations
+View the evidence used to generate answers, including internal documents and external web sources.
+
+![NexusAI Citations](screenshots/05-agentic-rag-citations.png)
+
+### 6. Agentic RAG Execution Metrics
+Inspect query rewriting, evidence sufficiency, retry count, and web retrieval results.
+
+![NexusAI Execution Metrics](screenshots/06-agentic-rag-execution-metrics.png)
+
+### 7. Evaluation Dashboard
+Monitor retrieval quality, answer quality, and system performance through evaluation metrics.
+
+![NexusAI Evaluation Dashboard](screenshots/07-evaluation-dashboard.png)
 
 ## Getting Started
 
