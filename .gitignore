@@ -1,0 +1,57 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing and linting
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE and editor configuration
+.vscode/
+.idea/
+
+# Local data and uploaded documents
+data/raw/*
+!data/raw/.gitkeep
+
+data/processed/*
+!data/processed/.gitkeep
+
+data/vectorstore/
+data/evaluation_datasets/
+
+# Generated evaluation results
+src/nexusai/evaluation/results/*
+!src/nexusai/evaluation/results/.gitkeep
+
+# MLflow artifacts
+mlruns/
+mlflow.db
+mlflow_data/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary project files
+project_structure.txt
+*.tmp
+*.bak

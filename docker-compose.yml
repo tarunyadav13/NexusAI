@@ -1,0 +1,55 @@
+services:
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: nexusai-qdrant
+    restart: unless-stopped
+
+    ports:
+      - "127.0.0.1:6333:6333"
+
+    volumes:
+      - qdrant_data:/qdrant/storage
+
+    healthcheck:
+      test:
+        - CMD
+        - bash
+        - -c
+        - "timeout 2 bash -c '</dev/tcp/localhost/6333'"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  nexusai:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: nexusai-app
+    restart: unless-stopped
+
+    ports:
+      - "127.0.0.1:8501:8501"
+
+    env_file:
+      - .env
+
+    environment:
+      PYTHONPATH: /app/src
+      QDRANT_URL: http://qdrant:6333
+      QDRANT_PATH: /app/data/vectorstore
+
+    volumes:
+      - ./data/raw:/app/data/raw
+      - ./data/processed:/app/data/processed
+      - ./src/nexusai/evaluation/results:/app/src/nexusai/evaluation/results
+      - mlflow_data:/app/mlflow_data
+
+    depends_on:
+      qdrant:
+        condition: service_healthy
+
+volumes:
+  qdrant_data:
+  mlflow_data:

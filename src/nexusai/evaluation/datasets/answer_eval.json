@@ -1,0 +1,18 @@
+[
+  {
+    "query": "What is Artificial Intelligence?",
+    "reference_answer": "Artificial Intelligence is a field of computing concerned with creating systems that perform tasks requiring human-like intelligence."
+  },
+  {
+    "query": "Explain Retrieval Augmented Generation.",
+    "reference_answer": "Retrieval Augmented Generation combines information retrieval with large language models. It retrieves relevant external information and uses that information to generate context-aware answers."
+  },
+  {
+    "query": "What are the main stages of a RAG pipeline?",
+    "reference_answer": "A typical RAG pipeline includes document ingestion, text extraction, chunking, embedding generation, vector storage, retrieval, reranking, and response generation."
+  },
+  {
+    "query": "Why are vector databases used in RAG?",
+    "reference_answer": "Vector databases store document embeddings and support similarity search, allowing a RAG system to retrieve semantically relevant information."
+  }
+]

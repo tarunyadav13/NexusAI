@@ -1,0 +1,26 @@
+[
+  {
+    "query": "What is Artificial Intelligence?",
+    "relevant_sources": [
+      "sample.txt"
+    ]
+  },
+  {
+    "query": "Explain Retrieval Augmented Generation.",
+    "relevant_sources": [
+      "sample.txt"
+    ]
+  },
+  {
+    "query": "What are the main stages of a RAG pipeline?",
+    "relevant_sources": [
+      "sample.txt"
+    ]
+  },
+  {
+    "query": "Why are vector databases used in RAG?",
+    "relevant_sources": [
+      "sample.txt"
+    ]
+  }
+]
